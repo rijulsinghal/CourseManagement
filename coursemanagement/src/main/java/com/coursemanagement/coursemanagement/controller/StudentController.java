@@ -1,7 +1,6 @@
-package com.coursemanagement.coursemanagement.stuentController;
-import java.util.*;
+package com.coursemanagement.coursemanagement.controller;
 
-public class stuentController {
+public class StudentController {
     String studentName;    
     String studentId;
     int contactInfo;
@@ -21,7 +20,8 @@ public class stuentController {
         //takes to the query page and posts the required query
     }
     public String respondQuery(){
-        String query=input();
-        return query;
+        // String query=input();
+        // return query;
+        return null;
     }
 }

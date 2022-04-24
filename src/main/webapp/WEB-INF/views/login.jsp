@@ -111,7 +111,7 @@ margin-left: 4px;
 				<h3>Sign In</h3>
 			</div>
 			<div class="card-body">
-				<form action="test" method="post">
+				<form action="<%= request.getContextPath() %>/login" method="post">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>

@@ -44,7 +44,10 @@ public class signupServlet extends HttpServlet {
 			signup.setRepassword(re_password);
 			
 			try {
-				signupdao.addCredentials(signup);
+				int result = signupdao.addCredentials(signup);
+				if(result == 2) {
+					System.out.println("Account Exist!");
+				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

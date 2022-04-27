@@ -32,9 +32,9 @@ public class signupServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String fullname = request.getParameter("fullname");
-		String username = request.getParameter("username");;
-		String password = request.getParameter("password");;
-		String re_password = request.getParameter("re_password");;
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String re_password = request.getParameter("re_password");
 		
 		if(password.equals(re_password)) {
 			signup signup = new signup();

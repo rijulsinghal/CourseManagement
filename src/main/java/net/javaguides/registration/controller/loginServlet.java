@@ -30,17 +30,30 @@ public class loginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
+		String checkboxval = request.getParameter("teacherlogin");
+		System.out.println("checkboxval is: " + checkboxval);
+		
 		login login = new login();
 		login.setPassword(password);
 		login.setUsername(username);
+		login.setcheckboxval(checkboxval);
 		
-		int result = logindao.checkCredentials(login);
+		int result = logindao.checkCredentials(login,request);
 		if(result == 1) {
 			//TODO --> MAP TO STUDENT DASHBOARD;
 			System.out.println("Account Verified!!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
 			dispatcher.forward(request, response);
-		}else {
+			
+		}
+		else if(result == 2) {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/teacher.jsp");
+			dispatcher.forward(request, response);
+			
+		}
+		else {
+			System.out.println("Account Not Verified!!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
 			dispatcher.forward(request, response);
 		}

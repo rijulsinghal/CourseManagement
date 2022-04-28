@@ -38,6 +38,7 @@ public class AssignmentUploadServlet extends HttpServlet {
 		String ProblemDescription = request.getParameter("Description");
 		String ClassCode = request.getParameter("CourseCode");
 		String Deadline = request.getParameter("DeadlineDate");
+		String Code = request.getParameter("GenerateCode");
 		
 		System.out.println(ClassName);
 		System.out.println(ProblemStatement);
@@ -51,6 +52,7 @@ public class AssignmentUploadServlet extends HttpServlet {
 		uploadAssignment.setProblemStatement(ProblemStatement);
 		uploadAssignment.setCourseCode(ClassCode);
 		uploadAssignment.setDate(Deadline);
+		uploadAssignment.setCode(Code);
 		
 		int result = uploadassignmentdao.UploadAssignment(uploadAssignment);
 		if(result == 1) {

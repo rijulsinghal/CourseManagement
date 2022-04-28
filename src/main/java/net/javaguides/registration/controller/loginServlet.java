@@ -2,6 +2,7 @@ package net.javaguides.registration.controller;
 
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,8 +42,9 @@ public class loginServlet extends HttpServlet {
 		int result = logindao.checkCredentials(login,request);
 		if(result == 1) {
 			//TODO --> MAP TO STUDENT DASHBOARD;
+			
 			System.out.println("Account Verified!!");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/studentdash.jsp");
 			dispatcher.forward(request, response);
 			
 		}

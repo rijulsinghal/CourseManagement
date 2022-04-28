@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Solve Query</title>
+	<title>Post-Query</title>
   
 	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -35,10 +35,10 @@ align-content: center;
 }
 
 .card{
-height: 370px;
+
 margin-top: auto;
 margin-bottom: auto;
-width: 400px;
+width: 800px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 
@@ -64,7 +64,7 @@ top: -45px;
 }
 
 .input-group-prepend span{
-width: 50px;
+width: 100px;
 background-color: #FFC312;
 color: black;
 border:0 !important;
@@ -112,34 +112,29 @@ margin-left: 4px;
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Solve Query</h3>
+				<h3>Post-Query</h3>
 			</div>
 			<div class="card-body">
-				<form action="<%= request.getContextPath() %>/signup" method="post">
+				<form action="<%= request.getContextPath() %>/postQuery" method="post">
                     <div class="input-group form-group">
-						<input type="text" class="form-control" name = "ClassID" placeholder="Class-ID">
+						<input type="text" class="form-control" name = "ClassName" placeholder="Class-Name">
 						
 					</div>
 					
 					<div class="input-group form-group">
-						<input type="text" class="form-control"  name = "Statement" placeholder="Problem-Statement">
+						<input type="text" class="form-control"  name = "CourseCode" placeholder="Course-Code">
 						
 					</div>
 					
 					<div class="input-group form-group">
-						<textarea class="form-control"  name = "Description" placeholder="Problem-Description"></textarea>
+						<textarea class="form-control"  style = "height:400px ; width:400px;" name = "Query" placeholder="Query"></textarea>
 						
 					</div>
 
-                    <div class="input-group form-group">
-							<input type="file" id="myFile" name="filename">
-					</div>
 					<div class="form-group">
 						<input type="submit" value="Submit" class="btn float-right login_btn">
 					</div>
-					<div class="form-group">
-						<input type="submit" value="Back" class="btn float-left login_btn">
-					</div>
+					
 				</form>
 			</div>
 		</div>

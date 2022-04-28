@@ -9,7 +9,14 @@ public class UploadAssignment {
 	String ProblemDescription;
 	String CourseCode;
 	String Date;
+	String Code;
 	
+	public String getCode() {
+		return Code;
+	}
+	public void setCode(String code) {
+		Code = code;
+	}
 	public String getCourseCode() {
 		return CourseCode;
 	}

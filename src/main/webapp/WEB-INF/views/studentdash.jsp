@@ -17,7 +17,7 @@
 	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Teacher-DashBoard</title>
+	<title>Student-DashBoard</title>
 
 </head>
 
@@ -638,16 +638,20 @@ a:hover figcaption { color: #056767; }
 <body>
 	<header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">         
-        	<h4>Welcome Back <%= session.getAttribute("TeacherName") %> !!</h4>
+        	<h4>Welcome Back <%= session.getAttribute("StudentName") %> !! </h4>
             <nav class="tm-nav" id="tm-nav">            
                 <ul>
-                    <li class="tm-nav-item active"><a href="./teacher" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href = "#" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Home
                     </a></li>
-                    <li class="tm-nav-item"><a href="./makeClass" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="./joinclass" class="tm-nav-link">
                         <i class="fas fa-users"></i>
-                        Make Class
+                        Join-Class
+                    </a></li>
+                     <li class="tm-nav-item"><a href="./StudentInfo" class="tm-nav-link">
+                        <i class="fas fa-user"></i>
+                        Student-Info
                     </a></li>
                 </ul>
             </nav>
@@ -676,8 +680,8 @@ a:hover figcaption { color: #056767; }
                 </article>
                 <article class="col-12 col-md-6 tm-post">
                     <hr class="tm-hr-primary">
-                    <a href="./uploadAssignment" class="effect-lily tm-post-link tm-pt-20">
-                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Post Assignment</h2>
+                    <a href="./submitAssignment" class="effect-lily tm-post-link tm-pt-20">
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Submit Assignment</h2>
                     </a>                    
                     <p class="tm-pt-30">
                         
@@ -685,8 +689,8 @@ a:hover figcaption { color: #056767; }
                 </article>
                 <article class="col-12 col-md-6 tm-post">
                     <hr class="tm-hr-primary">
-                    <a href="./viewQuery" class="effect-lily tm-post-link tm-pt-20">
-                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">View Queries</h2>
+                    <a href="./postQuery" class="effect-lily tm-post-link tm-pt-20">
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Post Queries</h2>
                     </a>                    
                     <p class="tm-pt-30">
                         

@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", initial-scale=1.0">
-    <title>Make Class</title>
+    <title>My-Information</title>
     </head>
     <style>
         * {
@@ -80,37 +79,20 @@
     </style>
     <body>
         <div class="box">
-            <form action="<%= request.getContextPath() %>/makeClass" method="post">
-                <h2>Make-Class</h2>
+            <form>
+                <h2>My Information</h2>
                 <div class="input-group form-group">
-                    <input type="text" class="form-control"  name = "ClassName" placeholder="Class-Name">
+                    <h3>Name: <%= session.getAttribute("StudentName") %></h3>
                 </div>
                 <div class="input-group form-group">
-                    <input type="text" class="form-control" name = "ClassCode" placeholder="Course-Code">
+                	<h3>UserName/SRN: <%= session.getAttribute("StudentUsername") %></h3>
+                </div>
+                <div class="input-group form-group">
+                	<h3>Email-Id:<%= session.getAttribute("StudentUsername")%>@gmail.com</h3>
                 </div>
                
-                <input type="text" name="GenerateCode" placeholder="Generate-Code" id="password">
-                <table>
-                    <th><input type="button" id="button" class="btn1"onclick="genPassword()" value = "Generate" readonly></th>
-                    <th><input type="submit" id="button" class="btn2" onclick="">
-                </table>
+                
              </form>
         </div>
-        <script type="text/javascript">
-            var password=document.getElementById("password");
-
-            function genPassword(){
-                var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                var passwordLength = 5;
-                var password = "";
-
-                for (var i = 0; i <= passwordLength; i++) {
-                    var randomNumber = Math.floor(Math.random() * chars.length);
-                    password += chars.substring(randomNumber, randomNumber +1);
-                }
-
-                document.getElementById("password").value = password;
-            }
-        </script>
-    </body>
-</html>
+       </body>
+    

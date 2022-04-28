@@ -1,9 +1,19 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Submit Assignments</title>
+</head>
+<body>
+
+</body>
+</html><link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Post Assignment</title>
@@ -108,59 +118,25 @@ margin-left: 4px;
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Post Assignment</h3>
+				<h3>Submit Assignment</h3>
 			</div>
 			<div class="card-body">
-				<form action="<%= request.getContextPath() %>/uploadAssignment" method="post">
+				<form action="<%= request.getContextPath() %>/submitAssignment" method="post">
                     <div class="input-group form-group">
-						<input type="text" class="form-control" name = "ClassName" placeholder="Class-Name">	
+						<input type="text" class="form-control" name = "Assingment-Id" placeholder="Assignment-Id">	
 					</div>
 					<div class="input-group form-group">
-						<input type="text" class="form-control" name = "CourseCode" placeholder="Course-Code">	
+						<textarea class="form-control"  style = "height:600px; width:800px;" name = "Solution" placeholder="Enter Solution Here..."></textarea>
 					</div>
-					<div class="input-group form-group">
-						<textarea class="form-control"  name = "Statement" placeholder="Problem-Statement"></textarea>
-					</div>
-					<div class="input-group form-group">
-						<textarea class="form-control"  style = "height:400px; width:400px;" name = "Description" placeholder="Problem-Description"></textarea>
-					</div>
-					<div class="input-group form-group">
-						<h5 style = "color:white; height:20px;">Select DeadLine</h5>
-						<input type="date" name = "DeadlineDate">
-					
-						<h5 style = "margin-left: 15px ;color:white; height:20px;">Generate Code</h5>
-						<input type="text" name="GenerateCode" placeholder="Generate-Code" id="Generate-Code" readonly>
-					</div>
-		
+				
 					<div class="form-group">
 						<input type="submit" value="Submit" class="btn float-right login_btn">
-					</div>
-					<div class="form-group">
-						<input type="button" value="Generate-Code"  style = "background-color: #FFC312;" class="btn float-left" onclick = "genPassword()">
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-            var password=document.getElementById("Generate-Code");
-
-            function genPassword(){
-                var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                var passwordLength = 5;
-                var password = "";
-
-                for (var i = 0; i <= passwordLength; i++) {
-                    var randomNumber = Math.floor(Math.random() * chars.length);
-                    password += chars.substring(randomNumber, randomNumber +1);
-                }
-
-                document.getElementById("Generate-Code").value = password;
-            }
-        </script>
-
 
 </body>
 </html>

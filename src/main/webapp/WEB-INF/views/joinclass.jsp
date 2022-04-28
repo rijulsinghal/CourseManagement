@@ -6,7 +6,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", initial-scale=1.0">
-    <title>Make Class</title>
+    <title>Join-Class</title>
     </head>
     <style>
         * {
@@ -70,7 +70,7 @@
         }
 
         .btn2{
-            margin-left: 85px
+            margin-left: 110px
         }
 
         #button:hover {
@@ -80,37 +80,15 @@
     </style>
     <body>
         <div class="box">
-            <form action="<%= request.getContextPath() %>/makeClass" method="post">
-                <h2>Make-Class</h2>
+            <form action="<%= request.getContextPath() %>/joinclass" method="post">
+                <h2>Join-Class</h2>
                 <div class="input-group form-group">
-                    <input type="text" class="form-control"  name = "ClassName" placeholder="Class-Name">
+                    <input type="text" class="form-control" name = "ClassCode" placeholder="Class-Code">
                 </div>
-                <div class="input-group form-group">
-                    <input type="text" class="form-control" name = "ClassCode" placeholder="Course-Code">
-                </div>
-               
-                <input type="text" name="GenerateCode" placeholder="Generate-Code" id="password">
                 <table>
-                    <th><input type="button" id="button" class="btn1"onclick="genPassword()" value = "Generate" readonly></th>
-                    <th><input type="submit" id="button" class="btn2" onclick="">
+                    <th><input type="submit" id="button" class="btn2">
                 </table>
              </form>
         </div>
-        <script type="text/javascript">
-            var password=document.getElementById("password");
-
-            function genPassword(){
-                var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                var passwordLength = 5;
-                var password = "";
-
-                for (var i = 0; i <= passwordLength; i++) {
-                    var randomNumber = Math.floor(Math.random() * chars.length);
-                    password += chars.substring(randomNumber, randomNumber +1);
-                }
-
-                document.getElementById("password").value = password;
-            }
-        </script>
-    </body>
+   </body>
 </html>

@@ -52,7 +52,7 @@ hr {
 .form-control::placeholder { color: #999; }
 
 .tm-header {
-    background-color: #FFC312;;
+    background-color: blue;
     color: white;
     
     position: fixed;
@@ -93,7 +93,7 @@ hr {
     justify-content: center;
 }
 
-.tm-site-logo i { color: #FFC312;; 
+.tm-site-logo i { color: #FFC312;
 }
 
 .tm-main {
@@ -197,7 +197,7 @@ ul {
     width: 480px;
     margin-right: 30px;
     border-radius: 0;
-    border-color: #FFC312;
+    border-color: blue;
 
     font-size: 1.2rem;
 }
@@ -206,7 +206,7 @@ ul {
     width: 60px;
     height: 60px;
     border: none;
-    background-color: #FFC312;
+    background-color: blue;
 
     transition: all 0.3s ease;
 }
@@ -260,7 +260,7 @@ ul {
 .tm-new-badge {
     top: 25px;
     right: -10px;
-    background-color: #FFC312;
+    background-color: blue;
 
     color: white;
     padding: 5px 20px;
@@ -276,7 +276,7 @@ ul {
     color: #999;
 }
 
-.tm-post-link:hover .tm-post-title { color: #FFC312;; 
+.tm-post-link:hover .tm-post-title { color: blue; 
 }
 
 .tm-btn {
@@ -321,7 +321,7 @@ ul {
 
 .tm-paging-item .tm-paging-link:hover,
 .tm-paging-item.active .tm-paging-link {
-    background-color: #FFC312;
+    background-color: blue;
 
     color: white;
 }
@@ -332,7 +332,7 @@ ul {
     cursor: not-allowed;
 }
 
-.tm-external-link { color: #FFC312;; 
+.tm-external-link { color: blue;
 }
 .tm-external-link:hover { color: #09b6b6; }
 
@@ -353,7 +353,7 @@ ul {
 .tm-copyright { text-align: right; }
 
 /* Single Post page */
-hr.tm-hr-primary { border-top: 5px solid #FFC312;; 
+hr.tm-hr-primary { border-top: 5px solid #FFC312; 
 }
 
 video {
@@ -638,7 +638,7 @@ a:hover figcaption { color: #056767; }
 <body>
 	<header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">         
-        	<h4>Welcome Back <%= session.getAttribute("StudentName") %> !! </h4>
+        	<h4 style="text-align:center;">Welcome Back <br><%= session.getAttribute("StudentName") %> !! </h4>
             <nav class="tm-nav" id="tm-nav">            
                 <ul>
                     <li class="tm-nav-item active"><a href = "#" class="tm-nav-link">

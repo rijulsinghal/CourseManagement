@@ -93,7 +93,7 @@ hr {
     justify-content: center;
 }
 
-.tm-site-logo i { color: #FFC312;; 
+.tm-site-logo i { color: #FFC312;
 }
 
 .tm-main {
@@ -638,7 +638,7 @@ a:hover figcaption { color: #056767; }
 <body>
 	<header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">         
-        	<h4>Welcome Back <%= session.getAttribute("TeacherName") %> !!</h4>
+        	<h4 style = "text-align:center;">Welcome Back <br> <%= session.getAttribute("TeacherName") %> !!</h4>
             <nav class="tm-nav" id="tm-nav">            
                 <ul>
                     <li class="tm-nav-item active"><a href="./teacher" class="tm-nav-link">

@@ -39,6 +39,7 @@ public class postQueryDao extends Session{
 	        		System.out.println(document);
 	        		
 	        		db.getCollection("Query").insertOne(document);
+	        		client.close();
 	        		return 1;
 	        	}
 	        }

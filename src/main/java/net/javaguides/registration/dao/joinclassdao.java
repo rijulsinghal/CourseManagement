@@ -37,6 +37,7 @@ public class joinclassdao extends Session{
 	        		System.out.println(document);
 	        		
 	        		db.getCollection("Student").insertOne(document);
+	        		client.close();
 	        		return 1;
 	        	}
 	        }

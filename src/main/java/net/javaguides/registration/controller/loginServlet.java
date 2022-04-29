@@ -56,7 +56,7 @@ public class loginServlet extends HttpServlet {
 		}
 		else {
 			System.out.println("Account Not Verified!!");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/error.jsp");
 			dispatcher.forward(request, response);
 		}
 		

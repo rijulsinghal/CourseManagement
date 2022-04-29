@@ -15,21 +15,21 @@ import net.javaguides.registration.model.signup;
 public class signupDao {
 	
 	public int addCredentials(signup signup){
-	
 		MongoClient client = MongoClients.create("mongodb+srv://admin:admin1234@cluster0.jq3gg.mongodb.net/CourseManagement?retryWrites=true&w=majority");
         MongoDatabase db = client.getDatabase("CourseManagement");
         MongoCollection col = db.getCollection("Credentials");
-        
+	    
         String username = signup.getUsername();
         String temp;
         FindIterable<Document> iterDoc = col.find();
         boolean isfound = false;
         for(Document d:iterDoc) {
         	temp = d.getString("username");
-//        	System.out.println(temp);
+
         	if(temp.equalsIgnoreCase(username)) {
         		
         		isfound = true;	
+        		client.close();
         		return 2;
         	}
         	
@@ -41,6 +41,7 @@ public class signupDao {
 			document.append("username", signup.getUsername());
 			document.append("password", signup.getPassword());
 			col.insertOne(document);
+			client.close();
 	    }
 		
         

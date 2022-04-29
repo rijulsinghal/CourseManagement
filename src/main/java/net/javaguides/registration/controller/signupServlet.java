@@ -48,6 +48,10 @@ public class signupServlet extends HttpServlet {
 				if(result == 2) {
 					System.out.println("Account Exist!");
 				}
+				if(result == 0) {
+					RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/error.jsp");
+					dispatcher.forward(request, response);
+				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

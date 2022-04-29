@@ -50,8 +50,10 @@ public class UploadAssignmentDao extends Session{
         
         if(isfound) {
         	db.getCollection("Assignments").insertOne(document);
+        	client.close();
         	return 1;
         }else {
+        	client.close();
         	return 0;
         }
         

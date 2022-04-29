@@ -35,6 +35,7 @@ public class MakeClassDao extends Session {
 	        System.out.println("TeacherUserName is: " + session.getAttribute("TeacherUsername"));
 	        
 	        col.insertOne(document);
+	        client.close();
 	    }
 		catch(Exception e) {
 			return 0;

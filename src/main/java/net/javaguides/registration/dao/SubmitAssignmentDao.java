@@ -24,6 +24,7 @@ public class SubmitAssignmentDao extends Session{
         document.append("StudentUserName", session.getAttribute("StudentUsername"));
         
         col.insertOne(document);
+        client.close();
 		
 		return 1;
 		

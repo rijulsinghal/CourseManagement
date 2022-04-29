@@ -96,7 +96,7 @@ public class loginDao extends  Session{
         	session.setAttribute("Assignments", Assignments);
         	session.setAttribute("ClassInfo", ClassInfo);
         	session.setAttribute("Query", Query);
-        	
+        	client.close();
         	return 2;
         }
         
@@ -154,6 +154,7 @@ public class loginDao extends  Session{
         	}
         	
         	session.setAttribute("Assignments", Assignments);
+        	client.close();
         	return 1;
 	    }
 		
